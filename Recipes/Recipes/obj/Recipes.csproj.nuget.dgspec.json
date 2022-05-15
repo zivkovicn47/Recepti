@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gost\\source\\repos\\Recipes\\Recipes\\Recipes.csproj": {}
+    "G:\\_Nikola\\Maturski Ispit\\Recipes\\Recipes\\Recipes\\Recipes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gost\\source\\repos\\Recipes\\Recipes\\Recipes.csproj": {
+    "G:\\_Nikola\\Maturski Ispit\\Recipes\\Recipes\\Recipes\\Recipes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gost\\source\\repos\\Recipes\\Recipes\\Recipes.csproj",
+        "projectUniqueName": "G:\\_Nikola\\Maturski Ispit\\Recipes\\Recipes\\Recipes\\Recipes.csproj",
         "projectName": "Recipes",
-        "projectPath": "C:\\Users\\Gost\\source\\repos\\Recipes\\Recipes\\Recipes.csproj",
+        "projectPath": "G:\\_Nikola\\Maturski Ispit\\Recipes\\Recipes\\Recipes\\Recipes.csproj",
         "packagesPath": "C:\\Users\\Gost\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gost\\source\\repos\\Recipes\\Recipes\\obj\\",
+        "outputPath": "G:\\_Nikola\\Maturski Ispit\\Recipes\\Recipes\\Recipes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gost\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,6 +63,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.3.1, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.1.3, )"
             }
           },
           "imports": [

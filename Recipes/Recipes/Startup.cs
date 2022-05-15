@@ -46,6 +46,11 @@ namespace Recipes
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            DefaultFilesOptions options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("startup.html");
+            app.UseDefaultFiles(options);
             app.UseSwagger();
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Test1 Api v1");
@@ -59,7 +64,7 @@ namespace Recipes
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                  pattern: "{controller}/{action=Index}/{id?}");
             });
         }
     }

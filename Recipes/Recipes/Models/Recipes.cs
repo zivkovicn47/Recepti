@@ -10,13 +10,12 @@ namespace Recipes.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string LastName { get; set; }
         public DifficultyLevel Difficulty { get; set; }
         public int NumberServes { get; set; }
         public int MinuteForPrepere { get; set; }
         public string Text { get; set; }
         public DateTime CreateAt { get; set; }
-        public virtual ICollection<UsedRecipes> UsedRecipes { get; set; }
-        public virtual ICollection<Ingredients> Ingredients { get; set; }
+        //public virtual ICollection<UsedRecipes> UsedRecipes { get; set; }
+        //public virtual ICollection<Ingredients> Ingredients { get; set; }
     }
 }

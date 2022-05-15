@@ -98,9 +98,6 @@ namespace Recipes.Migrations
                     b.Property<int>("Difficulty")
                         .HasColumnType("int");
 
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("MinuteForPrepere")
                         .HasColumnType("int");
 
@@ -286,7 +283,7 @@ namespace Recipes.Migrations
                         .IsRequired();
 
                     b.HasOne("Recipes.Models.Recipes", "Recipe")
-                        .WithMany("Ingredients")
+                        .WithMany()
                         .HasForeignKey("RecipeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -335,7 +332,7 @@ namespace Recipes.Migrations
             modelBuilder.Entity("Recipes.Models.UsedRecipes", b =>
                 {
                     b.HasOne("Recipes.Models.Recipes", "Recipe")
-                        .WithMany("UsedRecipes")
+                        .WithMany()
                         .HasForeignKey("RecipeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -358,13 +355,6 @@ namespace Recipes.Migrations
                     b.Navigation("ShoppingListItems");
 
                     b.Navigation("StoredMaterials");
-                });
-
-            modelBuilder.Entity("Recipes.Models.Recipes", b =>
-                {
-                    b.Navigation("Ingredients");
-
-                    b.Navigation("UsedRecipes");
                 });
 
             modelBuilder.Entity("Recipes.Models.ShoppingList", b =>
