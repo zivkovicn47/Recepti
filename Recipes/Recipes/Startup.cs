@@ -28,6 +28,7 @@ namespace Recipes
             services.AddDbContext<RecipesContext>(options =>
             options.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Recipes;Integrated Security=True"));
             services.AddControllersWithViews();
+            services.AddCors();
             services.AddSwaggerGen();
         }
 
@@ -59,6 +60,15 @@ namespace Recipes
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(builder =>
+            {
+                builder
+                .WithOrigins("")
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
 
             app.UseEndpoints(endpoints =>
             {
